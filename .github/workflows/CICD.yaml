@@ -52,7 +52,7 @@ jobs:
       - name: Upload Airflow DAG to DEV
         run: |
           gcloud composer environments storage dags import \
-            --environment airflow-dev \
+            --environment airflowt-testing \
             --location us-central1 \
             --source airflow_job/airflow_job.py
 
@@ -97,7 +97,7 @@ jobs:
       - name: Upload Airflow DAG to PROD
         run: |
           gcloud composer environments storage dags import \
-            --environment airflow-prod \
+            --environment airflowt-prod \
             --location us-central1 \
             --source airflow_job/airflow_job.py
 
